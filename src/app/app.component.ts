@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DynamicHooksComponent } from 'ngx-dynamic-hooks';
-import { EmojiParser } from './components/example/emojiParser';
+import { EmojiParser } from './components/emoji/emojiParser';
 
 @Component({
   selector: 'app-root',
