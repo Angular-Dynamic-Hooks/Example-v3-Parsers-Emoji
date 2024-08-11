@@ -9,7 +9,7 @@ export class EmojiParser implements HookParser {
 
   constructor(private hookFinder: HookFinder) {}
 
-  findHooks(content: string, context: any, options: ParseOptions): HookPosition[] {
+  findHooks(content: string): HookPosition[] {
     // As an example, this regex finds the emoticons :-D, :-O and :-*
     const emoticonRegex = /(?::-D|:-O|:-\*)/gm;
 
@@ -18,11 +18,11 @@ export class EmojiParser implements HookParser {
     return this.hookFinder.find(content, emoticonRegex);
   }
 
-  loadComponent(hookId: number, hookValue: HookValue, context: any, childNodes: Element[], options: ParseOptions): HookComponentData {
+  loadComponent(): HookComponentData {
     return { component: EmojiComponent };
   }
 
-  getBindings(hookId: number, hookValue: HookValue, context: any, options: ParseOptions): HookBindings {
+  getBindings(hookId: number, hookValue: HookValue): HookBindings {
     // Lets see what kind of emoticon this hook is and assign a fitting emoji
     let emojiType: string;
     switch (hookValue.openingTag) {
