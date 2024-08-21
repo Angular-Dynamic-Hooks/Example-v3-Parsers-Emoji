@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HookParser, HookValue, HookComponentData, HookBindings, HookFinder, HookPosition, ParseOptions } from 'ngx-dynamic-hooks';
+import { HookParser, HookValue, HookComponentData, HookBindings, HookFinder, HookPosition } from 'ngx-dynamic-hooks';
 import { EmojiComponent } from './emoji.component';
 
 @Injectable({ 
